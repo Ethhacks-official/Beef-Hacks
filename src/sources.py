@@ -275,7 +275,15 @@ class Sources:
                     print(f"An error occurred: {e}")
                     port = input("Typing port that apache2 is using like 80 or 8080 --> ")
 
-            cmd = ['ssh','-i', key_name,'-R', f'80:localhost:{port}','localhost.run',"--","--output","json"]
+            cmd = [
+    'ssh',
+    '-o', 'StrictHostKeyChecking=no',
+    '-o', 'UserKnownHostsFile=/dev/null',
+    '-i', key_name,
+    '-R', f'80:localhost:{port}',
+    'localhost.run',
+    '--', '--output', 'json'
+]
             process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             while True:
                 output = process.stdout.readline()
