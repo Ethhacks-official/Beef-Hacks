@@ -6,6 +6,7 @@ import re
 import requests
 import pyudev # type: ignore
 import os
+import json
 from scapy.layers.http import HTTPRequest
 from colorama import init, Fore
 init()

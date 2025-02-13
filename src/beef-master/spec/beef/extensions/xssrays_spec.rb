@@ -1,6 +1,6 @@
 
 #
-# Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - https://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -16,7 +16,7 @@ RSpec.describe 'BeEF Extension XSSRays' do
     config = @config.get('beef.extension.xssrays')
     expect(config).to have_key('enable')
     expect(config).to have_key('clean_timeout')
-    expect(config).to have_key('cross_domain')
+    expect(config).to have_key('cross_origin')
   end
 
   it 'interface' do

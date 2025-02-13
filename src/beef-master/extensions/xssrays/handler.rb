@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - https://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -67,7 +67,7 @@ module BeEF
           )
           xssrays_detail.save
 
-          print_info("[XSSRAYS] Scan id [#{xssrays_scan.id}] received ray [ip:#{hooked_browser.ip}], hooked domain [#{hooked_browser.domain}]")
+          print_info("[XSSRAYS] Scan id [#{xssrays_scan.id}] received ray [ip:#{hooked_browser.ip}], hooked origin [#{hooked_browser.domain}]")
           print_debug("[XSSRAYS] Ray info: \n #{request.query_string}")
         end
 

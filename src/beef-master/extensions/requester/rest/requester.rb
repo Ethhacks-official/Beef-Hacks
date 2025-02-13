@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - https://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -181,7 +181,7 @@ module BeEF
             port: host_port,
             path: uri,
             request_date: Time.now,
-            allow_cross_domain: 'true'
+            allow_cross_origin: 'true'
           )
 
           print_debug "added new http request for #{zombie.session}"

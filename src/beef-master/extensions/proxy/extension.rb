@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - https://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -10,7 +10,7 @@ module BeEF
 
       @short_name = 'proxy'
       @full_name = 'proxy'
-      @description = 'The tunneling proxy allows HTTP requests to the hooked domain to be tunneled through the victim browser'
+      @description = 'The tunneling proxy allows HTTP requests to the hooked origin to be tunneled through the victim browser'
     end
   end
 end

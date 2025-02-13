@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+# Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 # Browser Exploitation Framework (BeEF) - https://beefproject.com
 # See the file 'doc/COPYING' for copying permission
 #
@@ -46,7 +46,7 @@ module BeEF
       return false if has_non_printable_char?(str)
       return true if str.eql? 'UNKNOWN'
       return true if str.eql? 'ALL'
-      return false if !nums_only?(str) and !is_valid_float?(str)
+      return false if !nums_only?(str) and !str.match(/\A(0|[1-9][0-9]{0,3})(\.(0|[1-9][0-9]{0,3})){0,3}\z/)
       return false if str.length > 20
 
       true

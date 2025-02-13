@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2006-2024 Wade Alcorn - wade@bindshell.net
+// Copyright (c) 2006-2025 Wade Alcorn - wade@bindshell.net
 // Browser Exploitation Framework (BeEF) - https://beefproject.com
 // See the file 'doc/COPYING' for copying permission
 //
@@ -79,7 +79,7 @@ Ext.extend(zombiesTreeList, Ext.tree.TreePanel, {
   end
   if (BeEF::Core::Configuration.instance.get("beef.extension.xssrays.enable"))
     context_menu << {
-      id: 'xssrays_hooked_domain',
+      id: 'xssrays_hooked_origin',
       text: 'Launch XssRays on Hooked Domain',
       iconCls: 'zombie-tree-ctxMenu-xssrays'
     }
@@ -121,7 +121,7 @@ Ext.extend(zombiesTreeList, Ext.tree.TreePanel, {
                                 jsonData: {'hb_id': escape(hb_id)}
                             });
                           break;
-                       case 'xssrays_hooked_domain':
+                       case 'xssrays_hooked_origin':
                            Ext.Ajax.request({
                                 url: '/api/xssrays/scan/' + escape(hb_id) + '?token=' + beefwui.get_rest_token(),
                                 method: 'POST'
