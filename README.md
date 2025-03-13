@@ -60,3 +60,8 @@ First program will try to install the required linux tools. It will try to insta
 - Ngrok (for using ngrok service)
 
 Also, Tool uses beef framework for this tool will try to install beef dependencies. If some error occur in tool during installing beef dependencies, then install these manually by visiting beef framework folder that will be in src folder and type './install' to run the 'install' file of beef.
+
+
+## License
+
+This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1 - see the [LICENSE] file for details.
